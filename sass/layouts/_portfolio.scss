@@ -1,0 +1,104 @@
+.portfolio {
+    @extend %list;
+
+    @include for-tablet-portrait-up() {
+        @include grid();
+    }
+
+    &__card {
+        @include for-tablet-portrait-up() {
+            @include grid-column(4, 2);
+            display: flex;
+        }
+
+        @include for-desktop-up() {
+            @include grid-column(6, 3);
+        }
+    }
+
+    &__card:not(:last-child) {
+        @include for-tablet-portrait-down() {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__card-link {
+        @extend %link;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__card-link:hover,
+    &__card-link:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+        transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__card-link:hover &__card-overlay,
+    &__card-link:focus &__card-overlay {
+        transform: translateY(0);
+    }
+
+    &__img-thumb {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__card-img {
+        height: 294px;
+    }
+
+    &__card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        transform: translateY(100%);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        padding: 77px 24px;
+
+        background-color: rgba(33, 150, 243, 0.9);
+
+        @include for-tablet-portrait-up() {
+            padding: 49px 24px;
+        }
+
+        @include for-desktop-up() {
+            padding: 63px 24px;
+        }
+    }
+
+    &__card-desc {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1.5;
+        color: var(--white-text-color);
+    }
+
+    &__card-footer {
+        flex-grow: 1;
+
+        padding: 20px 24px;
+
+        border: 1px solid #eee;
+        border-top: none;
+    }
+
+    &__card-title {
+        margin-bottom: 4px;
+
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+    }
+
+    &__card-subtitle {
+        font-size: var(--secondary-font-size);
+        line-height: 1.8;
+        color: var(--secondary-text-color);
+    }
+}

@@ -1,0 +1,64 @@
+@mixin font-size-line-height($fz, $lh) {
+    font-size: $fz;
+    line-height: $lh / $fz;
+}
+
+@mixin grid($display: flex, $wrap: wrap, $gap: $gap) {
+    display: $display;
+    flex-wrap: $wrap;
+
+    margin: calc(-1 * #{$gap});
+}
+
+@mixin grid-column($amount-gaps, $amount-col, $gap: $gap) {
+    margin: $gap;
+    flex-basis: calc((100% - #{$gap} * #{$amount-gaps}) / #{$amount-col});
+}
+
+@mixin for-phone-down() {
+    @media screen and (max-width: 479px) {
+        @content;
+    }
+}
+
+@mixin for-phone-up() {
+    @media screen and (min-width: 480px) {
+        @content;
+    }
+}
+
+@mixin from-phone-up-to-tablet-portrait-down() {
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait-down() {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-portrait-up() {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin from-tablet-portrait-up-to-desktop-down() {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin for-desktop-down() {
+    @media screen and (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up() {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}

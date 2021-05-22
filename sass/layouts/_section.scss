@@ -1,0 +1,31 @@
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include for-desktop-up() {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+
+        font-weight: var(--title-font-weight);
+        @include font-size-line-height(28px, 33px);
+        text-align: center;
+
+        @include for-desktop-up() {
+            margin-bottom: 50px;
+
+            @include font-size-line-height(36px, 42px);
+        }
+    }
+
+    &--top-padding {
+        padding-top: 0;
+    }
+
+    &--bg-color-gray {
+        background-color: #f5f4fa;
+    }
+}

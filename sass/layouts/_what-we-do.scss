@@ -1,0 +1,41 @@
+.what-we-do {
+    @include for-desktop-down() {
+        display: none;
+    }
+
+    &__list {
+        @extend %list;
+
+        @include for-desktop-up() {
+            @include grid();
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        @include for-desktop-up() {
+            @include grid-column(6, 3);
+        }
+    }
+
+    &__title-underlay {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        width: 100%;
+
+        padding: 27px 0;
+
+        background-color: rgba(47, 48, 58, 0.8);
+    }
+
+    &__title {
+        font-size: var(--primary-font-size);
+        font-weight: var(--title-font-weight);
+        text-transform: uppercase;
+        color: var(--white-text-color);
+        text-align: center;
+    }
+}

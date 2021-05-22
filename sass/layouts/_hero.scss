@@ -1,0 +1,42 @@
+.hero {
+    max-width: 1600px;
+    height: 400px;
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 118px;
+    padding-bottom: 118px;
+
+    text-align: center;
+
+    background-color: #c4c4c4;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../images/hero/hero-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include for-desktop-up() {
+        height: 600px;
+
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+
+    &__title {
+        max-width: 360px;
+        margin: 0 auto 30px;
+
+        font-weight: 900;
+        @include font-size-line-height(26px, 42px);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+
+        color: var(--white-text-color);
+
+        @include for-desktop-up() {
+            max-width: 696px;
+
+            @include font-size-line-height(44px, 60px);
+        }
+    }
+}

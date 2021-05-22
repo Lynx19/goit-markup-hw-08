@@ -1,0 +1,67 @@
+.menu {
+    &__container {
+        @include for-tablet-portrait-down() {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+            display: none;
+            width: 100%;
+
+            padding: 48px 40px;
+
+            background-color: #fff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+                0px 1px 3px rgba(0, 0, 0, 0.16);
+
+            &.is-open {
+                display: block;
+            }
+        }
+
+        @include from-phone-up-to-tablet-portrait-down() {
+            left: 50%;
+            width: 480px;
+
+            transform: translateX(-50%);
+        }
+
+        @include for-tablet-portrait-up() {
+            display: flex;
+            flex-grow: 1;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+.menu-button {
+    position: relative;
+    z-index: 2;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+
+    @include for-tablet-portrait-up() {
+        display: none;
+    }
+
+    &__icon-close {
+        display: none;
+    }
+
+    &.is-open &__icon-close {
+        display: block;
+    }
+
+    &.is-open &__icon-open {
+        display: none;
+    }
+}

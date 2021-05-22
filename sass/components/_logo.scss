@@ -1,0 +1,16 @@
+.logo {
+    display: inline-block;
+
+    font-family: 'Raleway', sans-serif;
+    font-weight: var(--title-font-weight);
+    @include font-size-line-height(24px, 28px);
+    @extend %link;
+
+    @include for-desktop-up() {
+        @include font-size-line-height(26px, 31px);
+    }
+
+    &__accent-word {
+        color: var(--accent-color);
+    }
+}

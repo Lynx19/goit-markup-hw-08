@@ -1,0 +1,39 @@
+.socials-in-menu {
+    @extend %list;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: -10px;
+    margin-left: -10px;
+
+    @include for-tablet-portrait-up() {
+        display: none;
+    }
+
+    &__item {
+        display: flex;
+
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    &__item:not(:last-child)::after {
+        content: '';
+        display: inline-block;
+        width: 1px;
+        height: 100%;
+        background-color: rgba(33, 33, 33, 0.2);
+        margin-left: 10px;
+    }
+
+    &__link {
+        @extend %link;
+
+        display: inline-block;
+        font-weight: 500;
+        @include font-size-line-height(18px, 22px);
+        letter-spacing: 0.02em;
+        color: var(--accent-color);
+    }
+}
