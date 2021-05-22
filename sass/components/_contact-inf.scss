@@ -59,4 +59,24 @@
     &__icon--prepend {
         margin-right: 10px;
     }
+
+    &__icon--envelop-desktop-size {
+        width: 14px;
+        height: 10px;
+
+        @include for-desktop-up() {
+            width: 16px;
+            height: 12px;
+        }
+    }
+
+    &__icon--smart-desktop-size {
+        width: 10px;
+        height: 14px;
+
+        @include for-desktop-up() {
+            width: 10px;
+            height: 16px;
+        }
+    }
 }

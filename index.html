@@ -68,7 +68,15 @@
                                 "
                                 href="mailto:info@devstudio.com"
                             >
-                                <svg class="contact-inf__icon contact-inf__icon--prepend" width="16" height="12">
+                                <svg
+                                    class="
+                                        contact-inf__icon
+                                        contact-inf__icon--prepend
+                                        contact-inf__icon--envelop-desktop-size
+                                    "
+                                    width="14"
+                                    height="10"
+                                >
                                     <use href="./images/sprite.svg#envelope"></use>
                                 </svg>
                                 info@devstudio.com</a
@@ -87,7 +95,15 @@
                                 "
                                 href="tel:+380961111111"
                             >
-                                <svg class="contact-inf__icon contact-inf__icon--prepend" width="10" height="16">
+                                <svg
+                                    class="
+                                        contact-inf__icon
+                                        contact-inf__icon--prepend
+                                        contact-inf__icon--smart-desktop-size
+                                    "
+                                    width="10"
+                                    height="14"
+                                >
                                     <use href="./images/sprite.svg#smartphone"></use>
                                 </svg>
                                 +38 096 111 11 11</a
@@ -193,31 +209,70 @@
                     <h2 class="section__title">Чем мы занимаемся</h2>
                     <ul class="what-we-do__list">
                         <li class="what-we-do__item">
-                            <img
-                                src="./images/what-we-do/what-we-do-1.jpg"
-                                alt="Человек сидит за столом и пишет программу на компьютере"
-                                width="370"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/what-we-do/desktop/what-we-do-desktop-1-370.webp    1x,
+                                        ./images/what-we-do/desktop/what-we-do-desktop-1-370@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <img
+                                    srcset="
+                                        ./images/what-we-do/desktop/what-we-do-desktop-1-370.jpg    1x,
+                                        ./images/what-we-do/desktop/what-we-do-desktop-1-370@2x.jpg 2x
+                                    "
+                                    src="./images/what-we-do/desktop/what-we-do-desktop-1-370.jpg"
+                                    alt="Человек сидит за столом и пишет программу на компьютере"
+                                    width="370"
+                                />
+                            </picture>
                             <div class="what-we-do__title-underlay">
                                 <h3 class="what-we-do__title">Десктопные приложения</h3>
                             </div>
                         </li>
                         <li class="what-we-do__item">
-                            <img
-                                src="./images/what-we-do/what-we-do-2.jpg"
-                                alt="Женщина держит телефон в руке и работает в ноутбуке"
-                                width="370"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/what-we-do/desktop/what-we-do-desktop-2-370.webp    1x,
+                                        ./images/what-we-do/desktop/what-we-do-desktop-2-370@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <img
+                                    srcset="
+                                        ./images/what-we-do/desktop/what-we-do-desktop-2-370.jpg    1x,
+                                        ./images/what-we-do/desktop/what-we-do-desktop-2-370@2x.jpg 2x
+                                    "
+                                    src="./images/what-we-do/desktop/what-we-do-desktop-2-370.jpg"
+                                    alt="Человек сидит за столом и пишет программу на компьютере"
+                                    width="370"
+                                />
+                            </picture>
                             <div class="what-we-do__title-underlay">
                                 <h3 class="what-we-do__title">Мобильные приложения</h3>
                             </div>
                         </li>
                         <li class="what-we-do__item">
-                            <img
-                                src="./images/what-we-do/what-we-do-3.jpg"
-                                alt="Человек держит в руках планшет, смотрит гамму цветов"
-                                width="370"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images/what-we-do/desktop/what-we-do-desktop-3-370.webp    1x,
+                                        ./images/what-we-do/desktop/what-we-do-desktop-3-370@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <img
+                                    srcset="
+                                        ./images/what-we-do/desktop/what-we-do-desktop-3-370.jpg    1x,
+                                        ./images/what-we-do/desktop/what-we-do-desktop-3-370@2x.jpg 2x
+                                    "
+                                    src="./images/what-we-do/desktop/what-we-do-desktop-3-370.jpg"
+                                    alt="Человек сидит за столом и пишет программу на компьютере"
+                                    width="370"
+                                />
+                            </picture>
                             <div class="what-we-do__title-underlay">
                                 <h3 class="what-we-do__title">Дизайнерские решения</h3>
                             </div>
@@ -235,12 +290,56 @@
                     <h2 class="section__title">Наша команда</h2>
                     <ul class="team__list">
                         <li class="team__item">
-                            <img
-                                class="team__image"
-                                src="./images/team/team-member-1.jpg"
-                                alt="Фотография участника команды Игоря Демьяненко"
-                                width="270"
-                            />
+                            <picture>
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/team/desktop/team-desktop-1-270.webp    1x,
+                                        ./images/team/desktop/team-desktop-1-270@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./images/team/tablet/team-tablet-1-354.webp    1x,
+                                        ./images/team/tablet/team-tablet-1-354@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/team/mobile/team-mobile-1-450.webp    1x,
+                                        ./images/team/mobile/team-mobile-1-450@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/team/desktop/team-desktop-1-270.jpg    1x,
+                                        ./images/team/desktop/team-desktop-1-270@2x.jpg 2x
+                                    "
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./images/team/tablet/team-tablet-1-354.jpg    1x,
+                                        ./images/team/tablet/team-tablet-1-354@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    class="team__image"
+                                    srcset="
+                                        ./images/team/mobile/team-mobile-1-450.jpg    1x,
+                                        ./images/team/mobile/team-mobile-1-450@2x.jpg 2x
+                                    "
+                                    src="./images/team/mobile/team-1-450.jpg"
+                                    alt="Фотография участника команды Игоря Демьяненко"
+                                    width="450"
+                                />
+                            </picture>
                             <!-- Start team__wrap -->
                             <div class="team__wrap">
                                 <h3 class="team__name">Игорь Демьяненко</h3>
@@ -281,12 +380,56 @@
                             <!-- End team__wrap -->
                         </li>
                         <li class="team__item">
-                            <img
-                                class="team__image"
-                                src="./images/team/team-member-2.jpg"
-                                alt="Фотография участника команды Ольги Репиной"
-                                width="270"
-                            />
+                            <picture>
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/team/desktop/team-desktop-2-270.webp    1x,
+                                        ./images/team/desktop/team-desktop-2-270@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./images/team/tablet/team-tablet-2-354.webp    1x,
+                                        ./images/team/tablet/team-tablet-2-354@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/team/mobile/team-mobile-2-450.webp    1x,
+                                        ./images/team/mobile/team-mobile-2-450@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/team/desktop/team-desktop-2-270.jpg    1x,
+                                        ./images/team/desktop/team-desktop-2-270@2x.jpg 2x
+                                    "
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./images/team/tablet/team-tablet-2-354.jpg    1x,
+                                        ./images/team/tablet/team-tablet-2-354@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    class="team__image"
+                                    srcset="
+                                        ./images/team/mobile/team-mobile-2-450.jpg    1x,
+                                        ./images/team/mobile/team-mobile-2-450@2x.jpg 2x
+                                    "
+                                    src="./images/team/mobile/team-mobile-2-450.jpg"
+                                    alt="Фотография участника команды Игоря Демьяненко"
+                                    width="450"
+                                />
+                            </picture>
                             <!-- Start team__wrap -->
                             <div class="team__wrap">
                                 <h3 class="team__name">Ольга Репина</h3>
@@ -327,12 +470,56 @@
                             <!-- End team__wrap -->
                         </li>
                         <li class="team__item">
-                            <img
-                                class="team__image"
-                                src="./images/team/team-member-3.jpg"
-                                alt="Фотография участника команды Николая Тарасова"
-                                width="270"
-                            />
+                            <picture>
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/team/desktop/team-desktop-3-270.webp    1x,
+                                        ./images/team/desktop/team-desktop-3-270@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./images/team/tablet/team-tablet-3-354.webp    1x,
+                                        ./images/team/tablet/team-tablet-3-354@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/team/mobile/team-mobile-3-450.webp    1x,
+                                        ./images/team/mobile/team-mobile-3-450@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/team/desktop/team-desktop-3-270.jpg    1x,
+                                        ./images/team/desktop/team-desktop-3-270@2x.jpg 2x
+                                    "
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./images/team/tablet/team-tablet-3-354.jpg    1x,
+                                        ./images/team/tablet/team-tablet-3-354@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    class="team__image"
+                                    srcset="
+                                        ./images/team/mobile/team-mobile-3-450.jpg    1x,
+                                        ./images/team/mobile/team-mobile-3-450@2x.jpg 2x
+                                    "
+                                    src="./images/team/mobile/team-mobile-3-450.jpg"
+                                    alt="Фотография участника команды Игоря Демьяненко"
+                                    width="450"
+                                />
+                            </picture>
                             <!-- Start team__wrap -->
                             <div class="team__wrap">
                                 <h3 class="team__name">Николай Тарасов</h3>
@@ -373,12 +560,56 @@
                             <!-- End team__wrap -->
                         </li>
                         <li class="team__item">
-                            <img
-                                class="team__image"
-                                src="./images/team/team-member-4.jpg"
-                                alt="Фотография участника команды Михаила Ермакова"
-                                width="270"
-                            />
+                            <picture>
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/team/desktop/team-desktop-4-270.webp    1x,
+                                        ./images/team/desktop/team-desktop-4-270@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./images/team/tablet/team-tablet-4-354.webp    1x,
+                                        ./images/team/tablet/team-tablet-4-354@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+                                <source
+                                    srcset="
+                                        ./images/team/mobile/team-mobile-4-450.webp    1x,
+                                        ./images/team/mobile/team-mobile-4-450@2x.webp 2x
+                                    "
+                                    type="image/webp"
+                                />
+
+                                <source
+                                    media="(min-width: 1200px)"
+                                    srcset="
+                                        ./images/team/desktop/team-desktop-4-270.jpg    1x,
+                                        ./images/team/desktop/team-desktop-4-270@2x.jpg 2x
+                                    "
+                                />
+                                <source
+                                    media="(min-width: 768px)"
+                                    srcset="
+                                        ./images/team/tablet/team-tablet-4-354.jpg    1x,
+                                        ./images/team/tablet/team-tablet-4-354@2x.jpg 2x
+                                    "
+                                />
+                                <img
+                                    class="team__image"
+                                    srcset="
+                                        ./images/team/mobile/team-mobile-4-450.jpg    1x,
+                                        ./images/team/mobile/team-mobile-4-450@2x.jpg 2x
+                                    "
+                                    src="./images/team/mobile/team-mobile-4-450.jpg"
+                                    alt="Фотография участника команды Игоря Демьяненко"
+                                    width="450"
+                                />
+                            </picture>
                             <!-- Start team__wrap -->
                             <div class="team__wrap">
                                 <h3 class="team__name">Михаил Ермаков</h3>

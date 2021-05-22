@@ -64,4 +64,8 @@
     &.is-open &__icon-open {
         display: none;
     }
+
+    &:hover {
+        fill: var(--accent-color);
+    }
 }

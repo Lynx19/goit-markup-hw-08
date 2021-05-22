@@ -32,6 +32,10 @@
     &__wrap {
         padding-top: 30px;
         padding-bottom: 24px;
+
+        @include for-desktop-up {
+            padding-bottom: 30px;
+        }
     }
 
     &__name {
