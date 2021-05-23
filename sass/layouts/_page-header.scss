@@ -31,7 +31,7 @@
         flex-direction: column-reverse;
 
         @include for-tablet-portrait-down() {
-            margin-bottom: 64px;
+            margin-bottom: 42px;
         }
 
         @include for-tablet-portrait-up() {

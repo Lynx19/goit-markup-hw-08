@@ -1,13 +1,14 @@
 .menu {
     &__container {
         @include for-tablet-portrait-down() {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             z-index: 1;
 
             display: none;
             width: 100%;
+            height: 100vh;
 
             padding: 48px 40px;
 
@@ -16,15 +17,10 @@
                 0px 1px 3px rgba(0, 0, 0, 0.16);
 
             &.is-open {
-                display: block;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
             }
-        }
-
-        @include from-phone-up-to-tablet-portrait-down() {
-            left: 50%;
-            width: 480px;
-
-            transform: translateX(-50%);
         }
 
         @include for-tablet-portrait-up() {
@@ -48,6 +44,12 @@
     background-color: transparent;
 
     cursor: pointer;
+
+    // &.is-open {
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    // }
 
     @include for-tablet-portrait-up() {
         display: none;

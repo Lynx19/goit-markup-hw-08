@@ -1,8 +1,4 @@
 .site-nav {
-    @include for-tablet-portrait-down {
-        margin-bottom: 302px;
-    }
-
     &__list {
         @extend %list;
 
