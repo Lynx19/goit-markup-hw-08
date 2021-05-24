@@ -31,6 +31,7 @@
         flex-direction: column-reverse;
 
         @include for-tablet-portrait-down() {
+            margin-top: 55px;
             margin-bottom: 42px;
         }
 
@@ -59,18 +60,3 @@
         }
     }
 }
-
-// .page-header {
-//     border-bottom: 1px solid #ececec;
-
-//     &__logo {
-//         margin-right: 93px;
-//         padding-top: 24px;
-//         padding-bottom: 25px;
-//     }
-
-//     &__contact-inf-link {
-//         padding-top: 32px;
-//         padding-bottom: 32px;
-//     }
-// }
