@@ -143,7 +143,7 @@
                 <div class="container">
                     <h1 class="visually-hidden">Портфолио</h1>
 
-                    <ul class="filters">
+                    <ul class="filters" data-portfolio-filters>
                         <li class="filters__item">
                             <label>
                                 <input
@@ -151,7 +151,7 @@
                                     type="radio"
                                     name="categories"
                                     checked
-                                    data-filter="all"
+                                    value="all"
                                 />
                                 <span class="filters__label">Все</span>
                             </label>
@@ -162,7 +162,7 @@
                                     class="filters__checkbox visually-hidden"
                                     type="radio"
                                     name="categories"
-                                    data-filter="web-sites"
+                                    value="web-sites"
                                 />
                                 <span class="filters__label">Веб-сайты</span>
                             </label>
@@ -173,7 +173,7 @@
                                     class="filters__checkbox visually-hidden"
                                     type="radio"
                                     name="categories"
-                                    data-filter="applications"
+                                    value="applications"
                                 />
                                 <span class="filters__label">Приложения</span>
                             </label>
@@ -184,7 +184,7 @@
                                     class="filters__checkbox visually-hidden"
                                     type="radio"
                                     name="categories"
-                                    data-filter="design"
+                                    value="design"
                                 />
                                 <span class="filters__label">Дизайн</span>
                             </label>
@@ -195,7 +195,7 @@
                                     class="filters__checkbox visually-hidden"
                                     type="radio"
                                     name="categories"
-                                    data-filter="marketing"
+                                    value="marketing"
                                 />
                                 <span class="filters__label">Маркетинг</span>
                             </label>
@@ -203,8 +203,8 @@
                     </ul>
 
                     <!-- Start portfolio cards section -->
-                    <ul class="portfolio">
-                        <li class="portfolio__card" data-cat="web-sites">
+                    <ul class="portfolio" data-cards>
+                        <li class="portfolio__card" data-category="web-sites">
                             <a class="portfolio__card-link" href="">
                                 <div class="portfolio__img-thumb">
                                     <picture>
@@ -272,7 +272,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="portfolio__card" data-cat="design">
+                        <li class="portfolio__card" data-category="design">
                             <a class="portfolio__card-link" href="">
                                 <div class="portfolio__img-thumb">
                                     <picture>
@@ -343,7 +343,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="portfolio__card" data-cat="applications">
+                        <li class="portfolio__card" data-category="applications">
                             <a class="portfolio__card-link" href="">
                                 <div class="portfolio__img-thumb">
                                     <picture>
@@ -411,7 +411,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="portfolio__card" data-cat="marketing">
+                        <li class="portfolio__card" data-category="marketing">
                             <a class="portfolio__card-link" href="">
                                 <div class="portfolio__img-thumb">
                                     <picture>
@@ -479,7 +479,7 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="portfolio__card" data-cat="applications">
+                        <li class="portfolio__card" data-category="applications">
                             <a class="portfolio__card-link" href="">
                                 <div class="portfolio__img-thumb">
                                     <picture>
@@ -547,7 +547,7 @@
                                 </div></a
                             >
                         </li>
-                        <li class="portfolio__card" data-cat="web-sites">
+                        <li class="portfolio__card" data-category="web-sites">
                             <a class="portfolio__card-link" href="">
                                 <div class="portfolio__img-thumb">
                                     <picture>
@@ -615,7 +615,7 @@
                                 </div></a
                             >
                         </li>
-                        <li class="portfolio__card" data-cat="design">
+                        <li class="portfolio__card" data-category="design">
                             <a class="portfolio__card-link" href="">
                                 <div class="portfolio__img-thumb">
                                     <picture>
@@ -685,7 +685,7 @@
                                 </div></a
                             >
                         </li>
-                        <li class="portfolio__card" data-cat="marketing">
+                        <li class="portfolio__card" data-category="marketing">
                             <a class="portfolio__card-link" href="">
                                 <div class="portfolio__img-thumb">
                                     <picture>
@@ -753,7 +753,7 @@
                                 </div></a
                             >
                         </li>
-                        <li class="portfolio__card" data-cat="applications">
+                        <li class="portfolio__card" data-category="applications">
                             <a class="portfolio__card-link" href="">
                                 <div class="portfolio__img-thumb">
                                     <picture>
@@ -936,7 +936,6 @@
 
         <!-- js -->
         <script src="./js/mobile-menu.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="./js/filters.js"></script>
     </body>
 </html>

@@ -1,23 +1,38 @@
-$(function() {
+(() => {
+    const refs = {
+        filtersList: document.querySelector('[data-portfolio-filters]'),
+        portfolioList: document.querySelector('[data-cards]'),
+    };
 
-    let filter = $("[data-filter]");
+    refs.filtersList.addEventListener('click', onFilterClick);
 
-    filter.on("click", function() {
+    function onFilterClick({ target }) {
+        if (target.nodeName !== 'INPUT') return;
 
-        let cat = $(this).data('filter');
+        const allCards = refs.portfolioList.querySelectorAll('li[data-category]');
+        const category = target.value;
 
-        if(cat == 'all') {
-            $("[data-cat]").removeClass("visually-hidden");
-        } else {
-            $("[data-cat]").each(function() {
-                let workCat = $(this).data('cat');
+        allCards.forEach(card => {
+            if (category === 'all' || card.dataset.category === category) {
+                showCard(card);
+                setTabindex(card.querySelector('a'), 0);
+                return;
+            }
 
-                if(workCat != cat) {
-                    $(this).addClass('visually-hidden');
-                } else {
-                    $(this).removeClass('visually-hidden');
-                }
-            });
-        }
-    });
-});
+            hideCard(card);
+            setTabindex(card.querySelector('a'), -1);
+        });
+    }
+
+    function showCard(card) {
+        card.classList.remove('visually-hidden');
+    }
+
+    function hideCard(card) {
+        card.classList.add('visually-hidden');
+    }
+
+    function setTabindex(ref, index) {
+        ref.setAttribute('tabindex', index);
+    }
+})();
