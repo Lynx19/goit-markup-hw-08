@@ -10,15 +10,17 @@
         if (target.nodeName !== 'INPUT') return;
 
         const allCards = refs.portfolioList.querySelectorAll('li[data-category]');
-        const category = target.dataset.filter;
+        const category = target.value;
 
         allCards.forEach(card => {
             if (category === 'all' || card.dataset.category === category) {
                 showCard(card);
+                setTabindex(card.querySelector('a'), 0);
                 return;
             }
 
             hideCard(card);
+            setTabindex(card.querySelector('a'), -1);
         });
     }
 
@@ -28,5 +30,9 @@
 
     function hideCard(card) {
         card.classList.add('visually-hidden');
+    }
+
+    function setTabindex(ref, index) {
+        ref.setAttribute('tabindex', index);
     }
 })();
