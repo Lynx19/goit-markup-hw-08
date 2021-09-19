@@ -20,7 +20,7 @@
   padding: 0;
 }
 
-.logo, .socials-in-menu__link, .site-nav__link, .contact-inf__link, .portfolio__card-link, .address__location, .socials__link--with-icon {
+.logo, .socials-in-menu__link, .site-nav__link, .contact-inf__link, .filters__label, .portfolio__card-link, .address__location, .socials__link--with-icon {
   text-decoration: none;
   color: var(--primary-text-color);
 }
